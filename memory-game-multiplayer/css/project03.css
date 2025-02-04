@@ -151,4 +151,8 @@ body {
   #restartBtn:hover {
     background-color: #B88836;
   }
+
+  .game-info{
+    color: white;
+  }
   
