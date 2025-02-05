@@ -253,3 +253,62 @@ h1 {
   transform: rotateY(180deg);
   display: flex;
 }
+
+/* 🎮 Responsive Game Container */
+.game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 600px);
+  height: min(80vh, 90vw);
+  background: #fff;
+  border: 5px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 🃏 Responsive Game Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* 📐 Ensure Cards Scale */
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* 🔧 Adjust for Mobile Devices */
+@media (max-width: 500px) {
+  .game-container {
+      width: 95vw;
+      height: auto;
+      padding: 10px;
+  }
+  .grid {
+      gap: 5px;
+  }
+}
+
+/* 🍉 Ensure Fruit Border Resizes */
+.fruit-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+}
